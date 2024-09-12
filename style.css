@@ -1,0 +1,145 @@
+:root{
+    ---Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --Montserrat: "Montserrat", sans-serif;
+    --Fraunces: "Fraunces", serif;
+    --weight1: 500;
+    --weight2: 700;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--Cream);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+main{
+    background-color: var(--White);
+    display: flex;
+    border-radius: 0.7rem;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img{
+    width: 20rem;
+    border-radius: .7rem 0 0 .7rem;
+}
+
+.content{
+    padding: 1.8rem;
+    max-width: 15rem;
+}
+.content .product{
+    font-family: var(--Montserrat);
+    letter-spacing: 0.37rem;
+    font-size: 11px;
+}
+.content .product p{
+    margin: 0;
+    color: var(--Darkgrayishblue);
+    font-weight: var(--weight1);
+}
+
+.title{
+    max-width: 200px;
+}
+.title h1{
+    font-family: var(--Fraunces);
+    font-weight: var(--weight2);
+}
+
+.description p{
+    font-family: var(--Montserrat);
+    color: var(--Darkgrayishblue);
+    font-weight: var(--weight1);
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price h1{
+    font-family: var(--Fraunces);
+    color: var(---Darkcyan);
+    margin-top: 1rem;
+}
+.price p{
+    font-family: var(--Montserrat);
+    text-decoration:line-through;
+    color: var(--Darkgrayishblue);
+    padding-right: 1.6rem;
+    font-weight: var(--weight1);
+}
+
+.button{
+    background-color: var(---Darkcyan);
+    text-align: center;
+    padding: 1rem;
+    border-radius: .7rem;
+}
+.button a{
+    text-decoration: none;
+    color: var(--White);
+    font-family: var(--Montserrat);
+    font-weight: var(--weight1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button a svg{
+    padding-right: .5rem;
+}
+.button:hover{
+    background-color: hsl(158, 45%, 23%);
+    cursor: pointer;
+}
+
+@media screen and (max-width:375px) {
+    body{
+        height: auto;
+    }
+    main{
+        flex-direction: column;
+        margin: 1rem;
+        width: auto;
+    }
+    .image img{
+        border-radius: .7rem .7rem 0 0;
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 50%;
+    }
+    .title{
+        max-width: none;
+    }
+    .title h1{
+        margin: .5rem 0 0 0;
+    }
+    .content{
+        max-width: none;
+    }
+    .price h1{
+        margin-top: 0px;
+    }
+    .price p{
+        margin-top: 0;
+        padding-right: 3rem;
+    }
+}
